@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { RemoveAdsComponent } from './remove-ads.component';
+import { MainPage } from './main.page';
 
-describe('RemoveAdsComponent', () => {
-  let component: RemoveAdsComponent;
-  let fixture: ComponentFixture<RemoveAdsComponent>;
+describe('MainPage', () => {
+  let component: MainPage;
+  let fixture: ComponentFixture<MainPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ RemoveAdsComponent ],
+      declarations: [ MainPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(RemoveAdsComponent);
+    fixture = TestBed.createComponent(MainPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

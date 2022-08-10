@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CounterListsComponent } from './counter-lists.component';
+import { CounterListsPage } from './counter-lists.page';
 
-describe('CounterListsComponent', () => {
-  let component: CounterListsComponent;
-  let fixture: ComponentFixture<CounterListsComponent>;
+describe('CounterListsPage', () => {
+  let component: CounterListsPage;
+  let fixture: ComponentFixture<CounterListsPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CounterListsComponent ],
+      declarations: [ CounterListsPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CounterListsComponent);
+    fixture = TestBed.createComponent(CounterListsPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
