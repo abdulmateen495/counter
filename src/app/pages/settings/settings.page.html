@@ -4,6 +4,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content  scrollY="false">
+  <ion-list>
+    <ion-list-header>Sound</ion-list-header>
+    <ion-item lines="none">
+      <ion-icon class="ion-margin-end" name="musical-notes"></ion-icon>
+      <ion-label>Sound</ion-label>
+      <ion-toggle mode="md"  checked=checked></ion-toggle>
+    </ion-item >
+    <ion-item lines="none">
+      <ion-icon class="ion-margin-end" name="volume-mute"></ion-icon>
+      <ion-label>Vibration</ion-label>
+      <ion-toggle mode="md"  checked=checked></ion-toggle>
+    </ion-item>
 
+    <ion-list-header>Theme</ion-list-header>
+    <ion-item lines="none">
+      <ion-icon class="ion-margin-end" name="contrast"></ion-icon>
+      <ion-label>Dark Mode</ion-label>
+      <ion-toggle mode="md"  checked=checked></ion-toggle>
+    </ion-item>
+  </ion-list>
 </ion-content>

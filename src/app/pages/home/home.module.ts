@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 import {
   RoundProgressModule,
   ROUND_PROGRESS_DEFAULTS
@@ -18,7 +19,10 @@ import { ComponentModule } from 'src/app/components/components.module';
     ComponentModule,
     FormsModule,
     IonicModule,
+    RoundProgressModule,
     HomePageRoutingModule,
+    NgCircleProgressModule.forRoot(),
+
   ],
   declarations: [HomePage]
 })

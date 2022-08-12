@@ -4,6 +4,8 @@ import { RouteReuseStrategy } from '@angular/router';
 
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+
 import {
   RoundProgressModule,
   ROUND_PROGRESS_DEFAULTS
@@ -17,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [AppComponent],
   imports: [
     RoundProgressModule,
+    NgCircleProgressModule.forRoot(),
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
