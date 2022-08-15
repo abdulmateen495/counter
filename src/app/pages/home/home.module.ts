@@ -11,14 +11,16 @@ import {
   ROUND_PROGRESS_DEFAULTS
   } from 'angular-svg-round-progressbar';
 import { ComponentModule } from 'src/app/components/components.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+
 
 
 @NgModule({
   imports: [
     CommonModule,
-    ComponentModule,
     FormsModule,
     IonicModule,
+    SharedModule,
     RoundProgressModule,
     HomePageRoutingModule,
     NgCircleProgressModule.forRoot(),

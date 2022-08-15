@@ -1,6 +1,16 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="openReload()">
+        <ion-icon slot="start" name="reload-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Home</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="danger">
+        <ion-icon slot="start" name="add-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -9,17 +19,21 @@
     <circle-progress
     id="progress-bar"
   [percent]="85"
+  [backgroundGradient]="true"
+  [backgroundColor]="'#155A53'"
   [radius]="151"
   [toFixed]="0"
-  [titleFontSize]="'50'"
+  [backgroundGradientStopColor]="'#062F2B'"
+  [titleFontSize]="'70'"
   [showUnits]="false"
   [showSubtitle]="false"
-  [outerStrokeWidth]="10"
+  [outerStrokeWidth]="4"
   [innerStrokeWidth]="0"
-  [outerStrokeColor]="'#78C000'"
-  [innerStrokeColor]="'#C7E596'"
+  [outerStrokeColor]="'#82C6BF'"
   [animation]="true"
   [responsive]="true"
+  [titleColor]="'#ffffff'"
+  [titleFontWeight]="'900'"
   [animationDuration]="300"
   [backgroundPadding]="0"
 ></circle-progress>

@@ -1,6 +1,13 @@
 ion-list {
   background: none;
 }
+ion-item  {
+  --background:var(--theme-list-background)
+}
+
+ion-item ion-label  {
+  color: #ffffff;
+}
 .list-item {
   border-radius: 10px;
   box-shadow: 0px 2px 10px #0000000a;

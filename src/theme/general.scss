@@ -1,7 +1,81 @@
 ion-content {
-  --background : var(--theme-background-color);
+  --background: var(--theme-background);
 }
 
 ion-header {
   box-shadow: 0px 2px 20px #00000008;
+  --ion-toolbar-background: var(--theme-toolbar-background);
+  color: #ffffff;
 }
+
+ion-header ion-title {
+  color: #ffffff;
+}
+
+ion-icon {
+  color: #ffffff;
+}
+ion-tab-bar ion-label {
+  color: var(--theme-text-color);
+}
+
+ion-tab-bar {
+  --background: var(--theme-tab-bar-background);
+  box-shadow: 0px 2px 20px #00000008;
+}
+
+ion-list {
+  background: none;
+}
+
+ion-list-header {
+  color: #062f2b;
+  font-weight: bold;
+}
+
+ion-label {
+  --color: #ffffff !important;
+}
+
+ion-toggle {
+  --background-checked: #155a53;
+  --handle-background-checked: #062f2b;
+}
+
+ion-badge {
+  --background: #ffffff;
+  color: #062f2b;
+}
+
+.delete-modal {
+  --height:190px;
+  --width:310px;
+  --border-radius:14px;
+  flex-direction: column;
+  --backdrop-opacity:0.5;
+  --box-shadow:0 11px 15px -7px rgb(0 0 0 / 20%), 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%);
+}
+
+.delete-modal #main {
+
+  padding: 18px;
+
+}
+
+.delete-modal #second-main {
+
+}
+
+ion-alert.custom-alert {
+  --backdrop-opacity: 0.7;
+}
+
+.alert-wrapper.sc-ion-alert-md {
+  border-radius: 13px;
+}
+
+
+
+
+
+

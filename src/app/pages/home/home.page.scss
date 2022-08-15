@@ -27,3 +27,8 @@
   display: flex;
   justify-content: center;
 }
+
+ion-button {
+  --background: var(--theme-button-background);
+  font-size: 28px;
+}

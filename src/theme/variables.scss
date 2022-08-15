@@ -76,7 +76,14 @@
   --ion-color-light-tint: #f5f6f9;
 
   /** theme colors light **/
-  --theme-background-color:#9d87ab !important;
+  --theme-background:#2E746D !important;
+  --theme-toolbar-background:#062F2B;
+  --theme-tab-bar-background:#062F2B;
+  --theme-button-background:#062F2B;
+  --theme-list-background:#062F2B;
+  --ion-item-background:none;
+  --theme-text-color:#ffffff;
+
 }
 
 @media (prefers-color-scheme: dark) {
