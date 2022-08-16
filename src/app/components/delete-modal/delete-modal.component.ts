@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-delete-modal',
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delete-modal.component.scss'],
 })
 export class DeleteModalComponent implements OnInit {
-
-  constructor() { }
+  @Input() modalText: string;
+  @Input() buttonText: string;
+  constructor(private modal: ModalController) { }
 
   ngOnInit() {}
+
+  async confirm() {
+    await this.modal.dismiss();
+  }
+
+  async cancel() {
+    await this.modal.dismiss();
+  }
 
 }

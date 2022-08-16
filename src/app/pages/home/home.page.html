@@ -8,7 +8,7 @@
     <ion-title>Home</ion-title>
     <ion-buttons slot="primary">
       <ion-button color="danger">
-        <ion-icon slot="start" name="add-circle"></ion-icon>
+        <ion-icon slot="start" name="save"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -18,36 +18,39 @@
   <div id="progress-bar-wrapper">
     <circle-progress
     id="progress-bar"
-  [percent]="85"
   [backgroundGradient]="true"
   [backgroundColor]="'#155A53'"
   [radius]="151"
+  [percent]="progressInitial"
   [toFixed]="0"
+  [maxPercent]="2"
+  [title]="counter"
   [backgroundGradientStopColor]="'#062F2B'"
   [titleFontSize]="'70'"
+  [renderOnClick]="false"
   [showUnits]="false"
   [showSubtitle]="false"
   [outerStrokeWidth]="4"
   [innerStrokeWidth]="0"
   [outerStrokeColor]="'#82C6BF'"
-  [animation]="true"
+  [animation]="false"
+  [animateTitle]="true"
   [responsive]="true"
   [titleColor]="'#ffffff'"
   [titleFontWeight]="'900'"
-  [animationDuration]="300"
+  [animationDuration]="500"
   [backgroundPadding]="0"
 ></circle-progress>
   </div>
   <ion-row>
     <ion-col class="column-warpper" size="12">
       <div class="home-btns">
-        <ion-button expand="block">+</ion-button>
+        <ion-button expand="block" (click)="increment()">+</ion-button>
       </div>
     </ion-col>
     <ion-col class="column-warpper" size="12">
       <div class="home-btns">
-        <ion-button expand="block">-</ion-button>
-
+        <ion-button expand="block" (click)="decrement()">-</ion-button>
       </div>
     </ion-col>
   </ion-row>

@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { ModalController,AlertController } from '@ionic/angular';
 import { DeleteModalComponent } from 'src/app/components/delete-modal/delete-modal.component';
+import { Storage } from '@ionic/storage-angular';
+import { resetCounterText } from 'src/app/constants/genral.constants';
+
 
 
 @Component({
@@ -9,33 +12,47 @@ import { DeleteModalComponent } from 'src/app/components/delete-modal/delete-mod
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  handlerMessage = '';
-  roleMessage = '';
   constructor(private modal:ModalController, private alertController: AlertController) {}
-
+  counter:string = '0';
+  limit:number = 20;
+  progressInitial:number = 0;
+  progressGap:number = 100/this.limit;
   async openReload(){
-    // console.log("hello");
-    // const modal = await this.modal.create({
-    //   component:DeleteModalComponent,
-    //   cssClass:'delete-modal'
-    // })
-    // modal.present();
-    const alert = await this.alertController.create({
-      header: 'Are you sure?',
-      cssClass: 'custom-alert',
-      buttons: [
-        {
-          text: 'No',
-          cssClass: 'alert-button-cancel',
-        },
-        {
-          text: 'Yes',
-          cssClass: 'alert-button-confirm',
-        },
-      ],
-    });
-
-    await alert.present();
+    const modal = await this.modal.create({
+      component:DeleteModalComponent,
+      cssClass:'delete-modal',
+      componentProps: {
+        modalText: resetCounterText,
+        buttonText: 'Reset',
+      },
+    })
+    modal.present();
   }
 
+
+  increment(){
+    let count:any = parseInt(this.counter);
+    count = count + 1;
+    count.toString;
+    this.counter = count;
+    this.progressInitial = this.progressInitial + this.progressGap;
+    if(this.progressInitial > 100){
+      this.progressInitial = 0;
+      this.progressInitial = this.progressInitial + this.progressGap;
+    }
+  }
+
+  decrement(){
+    if(this.counter > '0'){
+      let count:any = parseInt(this.counter);
+      count = count - 1;
+      count.toString;
+      this.counter = count;
+      this.progressInitial = this.progressInitial - this.progressGap;
+      if(this.progressInitial == 0 && this.counter != '0'){
+        this.progressInitial = 100;
+      }
+    }
+
+  }
 }

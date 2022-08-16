@@ -1,11 +1,23 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="md">
+    <ion-title class="ion-text-center">
+      <img src="../../../assets/icon/logo.png" alt="logo" />
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-  <div id="main">
-    <ion-icon name="alert-circle"></ion-icon>
-    <ion-label>Confirm</ion-label>
-   Do you really want to delete the user ?
-  </div>
-  <div id="second-main">
-   <ion-button>Cancel</ion-button>
-   <ion-button>Confirm</ion-button>
+  <div class="content-wrapper">
+    <div class="ion-text-center">
+      <div class="icon-modal"><ion-icon name="alert-circle" size="large"></ion-icon></div>
+      <ion-text>{{modalText}}</ion-text>
+    </div>
+    <div class="buttons-inline">
+      <ion-button class="cancel-btn" mode="ios" (click)="cancel()">
+        Cancel
+      </ion-button>
+      <ion-button class="confirm" mode="ios" (click)="confirm()">
+        {{buttonText}}
+      </ion-button>
+    </div>
   </div>
 </ion-content>

@@ -1,4 +1,31 @@
-ion-content {
+// ion-content {
+//   --background: #f2f2f7;
+//   color: #000;
+// }
+ion-content{
   --background: #f2f2f7;
-  color: #000;
+  --overflow:hidden;
+  .cancel-btn{
+      --background: #B7B7B7;
+  }
+  .icon-modal ion-icon{
+    color: #ba2300 !important;
+  }
+  ion-text{
+      font-size: 18px;
+      line-height: 24px;
+      color: rgba(var(--ion-text-color-rgb), 0.6);
+  }
+  .buttons-inline{
+      margin-top: 14px !important;
+  }
+  .content-wrapper{
+      padding-top: 20px;
+  }
 }
+
+// ion-toolbar{
+//   &:first-of-type{
+//       padding-top: 0px !important;
+//   }
+// }
