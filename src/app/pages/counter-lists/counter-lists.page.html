@@ -4,15 +4,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content scrollY="false">
-  <ion-list>
-    <ion-item
+<ion-content>
+  <div *ngIf="counterList.length == 0">
+    <app-no-record-found></app-no-record-found>
+  </div>
+  <ion-list  *ngIf="counterList?.length !== 0">
+    <ion-item *ngFor="let list of counterList"
     lines="none"
     class="list-item">
     <ion-icon class="ion-margin-end" name="folder"></ion-icon>
-      <ion-label>First Counter</ion-label>
+      <ion-label>{{list?.title}}</ion-label>
+      <ion-label>{{list?.count}}</ion-label>
       <ion-icon name="play" size="small"></ion-icon>
       <ion-icon name="trash" size="small"></ion-icon>
     </ion-item>
   </ion-list>
+  <ion-infinite-scroll
+        (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
 </ion-content>

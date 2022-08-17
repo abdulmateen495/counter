@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from 'src/app/services/counter.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-counter-lists',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counter-lists.page.scss'],
 })
 export class CounterListsPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  counterList = [];
+  constructor(private storageService:StorageService, private counterService:CounterService) {
   }
+
+  ngOnInit() {}
+
+  ionViewWillEnter() {
+    this.storageService.get("counterList").then(data => {
+       this.counterList  = data;
+    })
+  }
+
+  doInfinite(infiniteScroll) {
+
+  }
+
 
 }

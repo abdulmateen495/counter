@@ -21,7 +21,8 @@ export class SettingsPage implements OnInit {
       cssClass:'delete-modal',
       componentProps: {
         modalText: deleteAllCountersText,
-        buttonText:'Delete'
+        buttonText:'Delete',
+        status:'delete'
       },
     })
     modal.present();

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { CounterService } from '../../services/counter.service';
+
 
 @Component({
   selector: 'app-delete-modal',
@@ -9,12 +11,16 @@ import { ModalController } from '@ionic/angular';
 export class DeleteModalComponent implements OnInit {
   @Input() modalText: string;
   @Input() buttonText: string;
-  constructor(private modal: ModalController) { }
+  @Input() status: string;
+  constructor(private modal: ModalController, private counter:CounterService) { }
 
   ngOnInit() {}
 
   async confirm() {
-    await this.modal.dismiss();
+    if(this.status == 'reset'){
+      await this.modal.dismiss({ status: 'reset' });
+    }
+
   }
 
   async cancel() {

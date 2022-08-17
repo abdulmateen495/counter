@@ -1,0 +1,27 @@
+
+ion-content{
+
+  --background:var(--theme-background);
+  --border-color : var(--theme-background);
+  --overflow:hidden;
+  .cancel-btn{
+      --background: var(--theme-button-background);
+  }
+  .buttons-inline{
+      margin-top: 14px !important;
+      justify-content: space-around;
+  }
+  .content-wrapper{
+      padding-top: 20px;
+  }
+
+  ion-input {
+    color: #ffffff;
+    --highlight-background: var(--theme-button-background);
+
+
+  }
+  .item-interactive.item-has-focus .item-native {
+    caret-color: var(--theme-button-background);
+  }
+}
