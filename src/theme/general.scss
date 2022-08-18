@@ -5,9 +5,6 @@ ion-content {
 ion-header {
   box-shadow: 0px 2px 20px #00000008;
   --ion-toolbar-background: var(--theme-toolbar-background);
-  color: #ffffff;
-
-
 }
 
 ion-toolbar {
@@ -15,11 +12,11 @@ ion-toolbar {
 }
 
 ion-header ion-title {
-  color: #ffffff;
+  color: var(--theme-text-color);
 }
 
 ion-icon {
-  color: #ffffff;
+  color: var(--theme-icon-color);
 }
 ion-tab-bar ion-label {
   color: var(--theme-text-color);
@@ -35,23 +32,23 @@ ion-list {
 }
 
 ion-list-header {
-  color: #062f2b;
+  color: var(--theme-button-background);
   font-weight: bold;
 }
 
 ion-label {
-  --color: #ffffff !important;
+  --color: var(--theme-text-color)!important;
 }
 
 ion-toggle {
   --background-checked: #155a53;
-  --handle-background-checked: #062f2b;
+  --handle-background-checked:  var(--theme-button-background);
   padding-inline: 0px;
 }
 
 ion-badge {
-  --background: #ffffff;
-  color: #062f2b;
+  --background: var(--theme-button-background);
+  color: #ffffff;
 }
 
 .delete-modal {

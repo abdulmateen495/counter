@@ -8,16 +8,31 @@ import { ModalController } from '@ionic/angular';
 })
 export class SaveModalComponent implements OnInit {
   title:string = null;
+  counter:string = null;
+  @Input() buttonText: string;
+  @Input() status: string;
+  @Input() currentObj = null;
   constructor(private modal: ModalController) {
-    console.log(this.title)
+
    }
 
-  ngOnInit() {}
+  ngOnInit() {
+      if(this.currentObj){
+        this.title = this.currentObj?.title
+      }
+
+  }
 
 
 
   async save() {
-    await this.modal.dismiss({title:this.title,status:'save'});
+    if(this.status == 'save'){
+      await this.modal.dismiss({title:this.title,status:'save'});
+    }
+    if(this.status == 'update'){
+      await this.modal.dismiss({title:this.title,status:'update'});
+    }
+
   }
 
 }

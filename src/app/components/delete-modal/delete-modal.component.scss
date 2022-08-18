@@ -3,7 +3,7 @@
 //   color: #000;
 // }
 ion-content{
-  --background: #f2f2f7;
+  --background: var(--theme-modal-background);
   --overflow:hidden;
   .cancel-btn{
       --background: #B7B7B7;

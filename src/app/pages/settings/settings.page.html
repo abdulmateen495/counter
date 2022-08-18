@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content scrollY="false">
+<ion-content >
   <ion-list>
     <ion-list-header>Sound</ion-list-header>
     <ion-item lines="none">
@@ -22,7 +22,7 @@
     <ion-item lines="none">
       <ion-icon class="ion-margin-end" name="contrast"></ion-icon>
       <ion-label>Dark Mode</ion-label>
-      <ion-toggle mode="md" checked="checked"></ion-toggle>
+      <ion-toggle mode="md" [checked]="darkMode" (ionChange)="themeSwitcher($event)"></ion-toggle>
     </ion-item>
 
     <ion-list-header>Counter</ion-list-header>
@@ -34,7 +34,7 @@
     <ion-item lines="none">
       <ion-icon class="ion-margin-end" name="bulb"></ion-icon>
       <ion-label>Counter Lap Limit</ion-label>
-      <ion-badge>1</ion-badge>
+      <ion-badge>20</ion-badge>
     </ion-item>
 
     <ion-item lines="none">

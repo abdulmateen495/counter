@@ -12,6 +12,7 @@ export class DeleteModalComponent implements OnInit {
   @Input() modalText: string;
   @Input() buttonText: string;
   @Input() status: string;
+  @Input() id?: number;
   constructor(private modal: ModalController, private counter:CounterService) { }
 
   ngOnInit() {}
@@ -19,6 +20,12 @@ export class DeleteModalComponent implements OnInit {
   async confirm() {
     if(this.status == 'reset'){
       await this.modal.dismiss({ status: 'reset' });
+    }
+    if(this.status == 'delete-single'){
+      await this.modal.dismiss({ status: 'delete-single' , id:this.id});
+    }
+    if(this.status == 'delete'){
+      await this.modal.dismiss({ status: 'delete' });
     }
 
   }
